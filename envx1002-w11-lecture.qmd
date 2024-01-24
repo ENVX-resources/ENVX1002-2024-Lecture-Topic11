@@ -1,0 +1,21 @@
+---
+title: Topic 11 -- Multiple Linear Regression
+subtitle: ENVX1002 Introduction to Statistical Methods
+author: Januar Harianto
+institute: The University of Sydney
+date: last-modified # today | last-modified
+date-format: "MMM YYYY" # see https://momentjs.com/docs/#/displaying/format/
+execute: 
+  eval: true
+  echo: true
+self-contained: false
+---
+
+
+# Thanks!
+
+This presentation is based on the [SOLES Quarto reveal.js template](https://github.com/usyd-soles-edu/soles-revealjs) and is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+
+
+<!-- Links -->
+[cc-by]: http://creativecommons.org/licenses/by/4.0/

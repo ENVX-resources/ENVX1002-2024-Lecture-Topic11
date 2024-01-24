@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="template_files/libs/clipboard/clipboard.min.js"></script>
-<script src="template_files/libs/quarto-html/tabby.min.js"></script>
-<script src="template_files/libs/quarto-html/popper.min.js"></script>
-<script src="template_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="template_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="template_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="template_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="template_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="envx1002-w11-lecture_files/libs/clipboard/clipboard.min.js"></script>
+<script src="envx1002-w11-lecture_files/libs/quarto-html/tabby.min.js"></script>
+<script src="envx1002-w11-lecture_files/libs/quarto-html/popper.min.js"></script>
+<script src="envx1002-w11-lecture_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="envx1002-w11-lecture_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="envx1002-w11-lecture_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="envx1002-w11-lecture_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="envx1002-w11-lecture_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Januar Harianto">
-  <title>Quarto reveal.js Template</title>
+  <title>Topic 11 – Multiple Linear Regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="envx1002-w11-lecture_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="envx1002-w11-lecture_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,94 +29,13 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #24292e;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #24292e; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #d73a49; } /* Attribute */
-    code span.bn { color: #005cc5; } /* BaseN */
-    code span.bu { color: #d73a49; } /* BuiltIn */
-    code span.cf { color: #d73a49; } /* ControlFlow */
-    code span.ch { color: #032f62; } /* Char */
-    code span.cn { color: #005cc5; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #d73a49; } /* DataType */
-    code span.dv { color: #005cc5; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
-    code span.fl { color: #005cc5; } /* Float */
-    code span.fu { color: #6f42c1; } /* Function */
-    code span.im { color: #032f62; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #d73a49; } /* Keyword */
-    code span.op { color: #24292e; } /* Operator */
-    code span.ot { color: #6f42c1; } /* Other */
-    code span.pp { color: #d73a49; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #005cc5; } /* SpecialChar */
-    code span.ss { color: #032f62; } /* SpecialString */
-    code span.st { color: #032f62; } /* String */
-    code span.va { color: #e36209; } /* Variable */
-    code span.vs { color: #032f62; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto.css">
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
-  <link href="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
-  <link href="template_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="envx1002-w11-lecture_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="envx1002-w11-lecture_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="envx1002-w11-lecture_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="envx1002-w11-lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="envx1002-w11-lecture_files/libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
+  <link href="envx1002-w11-lecture_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -407,8 +326,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="_extensions/soles/logo/title-slide.png" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Quarto reveal.js Template</h1>
-  <p class="subtitle">School of Life and Environmental Sciences (SOLES)</p>
+  <h1 class="title">Topic 11 – Multiple Linear Regression</h1>
+  <p class="subtitle">ENVX1002 Introduction to Statistical Methods</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -423,166 +342,6 @@ Januar Harianto
 
   <p class="date">Jan 2024</p>
 </section>
-<section>
-<section id="about" class="title-slide slide level1 center">
-<h1>About</h1>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>This template is on a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. If you choose to use this template, please attribute the source. You may also share your work under the same license. For example:</p>
-<blockquote>
-<p>This presentation is based on the <a href="https://github.com/usyd-soles-edu/soles-revealjs">SOLES reveal.js Quarto template</a> and is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-</blockquote>
-<p>Note that you do <strong>not</strong> need to license your presentation under cc-by 4.0. You can choose a different license, or no license at all. <strong>The only requirement is that you attribute the source.</strong></p>
-</div>
-</div>
-</div>
-</section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>A <strong>technical writing</strong> system that produces <em>reproducible</em>, <em>versioned</em>, and <em>extensible</em> documents – the next generation of <a href="https://rmarkdown.rstudio.com/"><strong>R Markdown</strong></a>.</p>
-
-<img data-src="images/quarto.jpeg" class="r-stretch"></section>
-<section id="features-html" class="slide level2">
-<h2>Features (HTML)</h2>
-<p>Follows the <strong>University of Sydney</strong> brand guidelines.</p>
-<ul>
-<li><strong>Logos</strong> - Primary logo on the title slide (black), and secondary horizontal logo on all other slides.</li>
-<li><strong>Fonts</strong> - <em>Source Sans Pro</em>, otherwise, <em>Times New Roman</em> (official alternate fonts to <em>Apercu Pro</em> and <em>Lyon Display</em>).</li>
-<li><strong>Colours</strong> - Uses the official University of Sydney colours <span style="color:#e64626"><strong>Ochre</strong></span>, <span style="color:#424242"><strong>Charcoal</strong></span>, <span style="color:#daa8a2"><strong>Heritage Rose</strong></span>, <span style="color:#8f9ec9"><strong>Jacaranda</strong></span> and <span style="color:#71a499"><strong>Eucalypt</strong></span>.</li>
-</ul>
-<p>Renders to multiple formats with <code>quarto render</code>:</p>
-<ul>
-<li><strong>HTML</strong> in reveal.js format</li>
-<li><strong>PDF</strong> via LaTeX</li>
-<li><strong>MS Powerpoint</strong> via Pandoc (TODO)</li>
-</ul>
-</section>
-<section id="pdf-output-is-not-11" class="slide level2">
-<h2>PDF output is not 1:1</h2>
-<p>The default PDF render is not 1:1 with the HTML output. To handle this, you can the following:</p>
-<ol type="1">
-<li>You <strong>must</strong> have Chrome, or a Chromium-based browser installed.</li>
-<li>Open the HTML output in Chrome.</li>
-<li>Press the <code>E</code> key to enter print mode.</li>
-<li>Print to PDF using <code>ctrl</code> + <code>p</code> (Windows) or <code>cmd</code> + <code>p</code> (macOS).</li>
-</ol>
-</section></section>
-<section>
-<section id="quick-start" class="title-slide slide level1 center">
-<h1>Quick start</h1>
-
-</section>
-<section id="installing-quarto" class="slide level2">
-<h2>Installing Quarto</h2>
-<p>Quarto is available for Windows, macOS, and Linux. See <a href="https://quarto.org/docs/getting-started/installation.html">installation instructions</a>.</p>
-<h3 id="recommendation">Recommendation</h3>
-<p><a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a> is recommended as the editor for Quarto. It is free, open-source, and has a lot of extensions that can be used to enhance the writing experience.</p>
-<h3 id="however">However…</h3>
-<p>Users familiar with <a href="https://posit.co/">RStudio</a> can also use it to write Quarto documents. See <a href="https://quarto.org/docs/get-started/hello/rstudio.html">here</a> for more information.</p>
-</section>
-<section id="installing-this-template" class="slide level2">
-<h2>Installing this template</h2>
-<p>There are three (3) ways:</p>
-<h3 id="recommended-use-the-quarto-cli">1. Recommended: Use the Quarto CLI</h3>
-<p>With the <a href="https://quarto.org/docs/getting-started/installation.html#installing-the-quarto-cli"><strong>Quarto CLI</strong></a> installed, run the following command in your terminal and follow the instructions:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">quarto</span> use template usyd-soles-edu/soles-revealjs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<h3 id="download-the-template-directly">2. Download the template directly</h3>
-<p>You can download the template folder directly from GitHub, ready to use. Go to the <a href="https://github.com/usyd-soles-edu/soles-revealjs">repository</a> and click on “&lt; &gt; Code”, then “Download ZIP”. Once you unzip the folder.</p>
-<h3 id="clone-the-template-repository">3. Clone the template repository</h3>
-<p>Go to the <a href="https://github.com/usyd-soles-edu/soles-revealjs">repository</a> and click on “Use this template”. Note that you will need to be familiar with Git and GitHub to use this method.</p>
-</section>
-<section id="editing-the-template" class="slide level2">
-<h2>Editing the template</h2>
-<p>All written content is in the <code>template.qmd</code> file. You may rename this file to whatever you like.</p>
-<h3 id="html-output">HTML output</h3>
-<p>Slides that are generated from this template are in HTML format. You can view the slides by opening the <code>.html</code> file in your browser. This file is generated in the same folder as the <code>.qmd</code> file.</p>
-</section>
-<section id="markdown" class="slide level2">
-<h2>Markdown</h2>
-<h3 id="flavour">Flavour</h3>
-<p>Quarto uses <a href="https://quarto.org/docs/authoring/markdown-basics.html"><strong>Pandoc-flavoured Markdown</strong></a> for text formatting.</p>
-<h3 id="formatting">Formatting</h3>
-<p><strong>Bold</strong> and <em>italic</em>. <code>Inline code</code>. What about a <a href="https://quarto.org">link</a>? And a footnote<sup>1</sup>? We can also use subscript<sub>s</sub> and superscript<sup>s</sup>.</p>
-<h3 id="lists">Lists</h3>
-<ul>
-<li>Lists <strong>must</strong> be preceded by a blank line.</li>
-<li>We can also created nested lists:
-<ol type="1">
-<li>This list is ordered.</li>
-<li>This list is also nexted.</li>
-</ol></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>This is a footnote.</p></li></ol></aside></section></section>
-<section>
-<section id="advanced-features" class="title-slide slide level1 center">
-<h1>Advanced features</h1>
-
-</section>
-<section id="reproducible-workflows" class="slide level2">
-<h2>Reproducible workflows</h2>
-<p>The advantage of Quarto over traditional slide software is that it allows code and output to be embedded in the document. This means that you can create a document that is <strong>reproducible</strong> and <strong>versioned</strong>.</p>
-<p>For example, the source of this slide is in the <code>template.qmd</code> file.</p>
-</section>
-<section id="code-example-1" class="slide level2">
-<h2>Code example 1</h2>
-<p>Using R, we show how to fit a linear regression model and print the model summary. Click on the code dropdown to see the code.</p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># fit a linear regression model</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt, <span class="at">data =</span> mtcars)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># print the model summary</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = mpg ~ wt, data = mtcars)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--4.5432 -2.3647 -0.1252  1.4096  6.8727 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  37.2851     1.8776  19.858  &lt; 2e-16 ***
-wt           -5.3445     0.5591  -9.559 1.29e-10 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 3.046 on 30 degrees of freedom
-Multiple R-squared:  0.7528,    Adjusted R-squared:  0.7446 
-F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
-</div>
-</div>
-</section>
-<section id="code-example-2" class="slide level2">
-<h2>Code example 2</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># plot a very nice plot based on iris dataset</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="template_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="equations" class="slide level2">
-<h2>Equations</h2>
-<p>Equations are based on <a href="https://www.latex-project.org/"><strong>LaTeX</strong></a> and powered by <a href="https://quarto.org/docs/authoring/math.html"><strong>MathJax</strong></a>.</p>
-<h3 id="inline-equations">Inline equations</h3>
-<p>Inline equations are surrounded by <code>$</code>. For example, the equation <span class="math inline">y = \beta_0 + \beta_1 x + \epsilon</span> is a linear regression model.</p>
-<h3 id="display-equations">Display equations</h3>
-<p>Display equations are surrounded by <code>$$</code>. For example, one way to display the equation for a <a href="https://en.wikipedia.org/wiki/Fourier_series">Fourier series</a> is:</p>
-<p><span class="math display"> f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n \cos \left( \frac{2 \pi n x}{L} \right) + b_n \sin \left( \frac{2 \pi n x}{L} \right) \right] </span></p>
-</section></section>
 <section id="thanks" class="title-slide slide level1 center">
 <h1>Thanks!</h1>
 <p>This presentation is based on the <a href="https://github.com/usyd-soles-edu/soles-revealjs">SOLES Quarto reveal.js template</a> and is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
@@ -592,25 +351,23 @@ F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
 
 </div>
 </section>
-
-
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="template_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="template_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="template_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="template_files/libs/revealjs/plugin/verticator/verticator.js"></script>
-  <script src="template_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/verticator/verticator.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="template_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="template_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="template_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="envx1002-w11-lecture_files/libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -788,44 +545,6 @@ F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

@@ -2,7 +2,7 @@
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-### [View slides in HTML](https://envx-resources.github.io/ENVX1002-Lecture-Template/#/title-slide)
+### [View slides in HTML](https://envx-resources.github.io/ENVX1002-2024-Lecture-Topic11/)
 
 **Topic X: Slide title here** | Semester 1, 2024
 

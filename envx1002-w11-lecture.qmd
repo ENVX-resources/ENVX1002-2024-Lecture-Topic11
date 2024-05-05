@@ -1,7 +1,7 @@
 ---
 title: Topic 11 -- Multiple Linear Regression
 subtitle: ENVX1002 Introduction to Statistical Methods
-author: Januar Harianto
+author: Liana Pozza
 institute: The University of Sydney
 date: last-modified # today | last-modified
 date-format: "MMM YYYY" # see https://momentjs.com/docs/#/displaying/format/
@@ -19,6 +19,40 @@ pacman::p_load_gh("datalorax/equatiomatic")
 
 ggplot2::theme_set(cowplot::theme_half_open())
 ```
+
+
+## Module overview
+
+- **Week 9. Describing relationships**
+    + Correlation &rarr; calculation, interpretation, things to watch out for
+    + Regression &rarr; Why do we care? model structure, model fitting
+  
+- **Week 10. Linear functions**
+    + Is the model worth fitting? &rarr; Assumptions, hypothesis testing
+    + How good is the model? &rarr; Measures of model fit
+  
+- **Week 11. Linear functions - multiple predictors** 
+    + Parsimonious models
+    + Introduction to Multiple Linear Regression (MLR) modelling
+    + Assumptions and interpretation
+
+- **Week 12. Nonlinear functions**
+    + Common nonlinear functions
+    + Transformations
+    + Performing nonlinear regression
+
+
+## Module overview
+  
+- **Week 11. Linear functions - multiple predictors** 
+    + Parsimonious models
+    + Introduction to Multiple Linear Regression (MLR) modelling
+    + Assumptions and interpretation
+
+
+
+
+
 
 # Recap
 
@@ -447,7 +481,7 @@ exp(0.51)
 ```
 
 - On average, the model predicts `Ozone` within `r exp(0.51)` ppb of the true value.
-- Number of observations is equal to the number of degrees of freedom (107) plus the number of predictors (3) = 110.
+- Number of observations = degrees of freedom (107) + number of parameters in the model (4) = 111.
 
 ## R-squared
 
